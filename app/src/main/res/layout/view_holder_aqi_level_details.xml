@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rlBg"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_aqi_good">
+
+                    <ImageView
+                        android:id="@+id/ivMarkerIcon"
+                        android:layout_width="45dp"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@null"
+                        android:padding="2dp"
+                        android:src="@drawable/icon_aqi_good" />
+
+                    <TextView
+                        android:id="@+id/tvAQINo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="1-50"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rlBg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Air Pollution Level - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvAQILevelName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_aqi_good"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:text="Good"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Health Implications - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_toEndOf="@+id/tvOne"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:maxLines="2"
+                            android:text="Air quality is considered satisfactory, and air pollution poses little or no risk."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Cautionary Statement - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_toEndOf="@+id/tvOne"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:maxLines="2"
+                            android:text="None."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linear"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlBgModerate"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_aqi_moderate">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@null"
+                        android:padding="2dp"
+                        android:src="@drawable/icon_aqi_moderate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="51-100"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearModerate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rlBgModerate"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Air Pollution Level - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_aqi_moderate"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:text="Moderate"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Health Implications - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Cautionary Statement - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearModerate"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlBgUnhealthyModerate"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_aqi_moderate_unhealthy">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@null"
+                        android:padding="2dp"
+                        android:src="@drawable/icon_aqi_moderate_unhealthy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="101-150"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearUnhealthyModerate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rlBgUnhealthyModerate"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Air Pollution Level - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_aqi_moderate_unhealthy"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:text="Unhealthy for Sensitive Groups"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Health Implications - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Members of sensitive groups may experience health effects. The general public is not likely to be affected."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Cautionary Statement - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearUnhealthyModerate"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlBgUnhealthy"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_aqi_unhealthy">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@null"
+                        android:padding="2dp"
+                        android:src="@drawable/icon_aqi_unhealthy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="151-200"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearUnhealthy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rlBgUnhealthy"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Air Pollution Level - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_aqi_unhealthy"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:text="Unhealthy"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Health Implications - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Cautionary Statement - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearUnhealthy"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlBgVeryUnhealthy"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_aqi_very_unhealthy">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@null"
+                        android:padding="2dp"
+                        android:src="@drawable/icon_aqi_very_unhealthy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="201-300"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearVeryUnhealthy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rlBgVeryUnhealthy"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Air Pollution Level - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_aqi_very_unhealthy"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:text="Very Unhealthy"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Health Implications - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Health warnings of emergency conditions. The entire population is more likely to be affected."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Cautionary Statement - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearVeryUnhealthy"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlBgHazardous"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_aqi_haradous">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@null"
+                        android:padding="2dp"
+                        android:src="@drawable/icon_aqi_hazardous" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="201-300"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearHazardous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rlBgHazardous"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Air Pollution Level - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_aqi_haradous"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:text="Hazardous"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Health Implications - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Health alert: everyone may experience more serious health effects."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:maxLines="2"
+                            android:text="Cautionary Statement - "
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="4dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:gravity="start"
+                            android:includeFontPadding="false"
+                            android:text="Everyone should avoid all outdoor exertion."
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/linearHazardous"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/grey" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

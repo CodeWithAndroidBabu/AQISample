@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        tools:context=".ui.SplashActivity">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/three_json"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+
+      <!--  <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="280dp"
+            android:layout_height="290dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="8dp"
+            android:translationY="-600dp"
+            android:layout_centerVertical="true"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_logo"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="MINISTRY OF ENVIRONMENT\nAIR QUALITY INDEX"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+-->
+    </RelativeLayout>
+</layout>

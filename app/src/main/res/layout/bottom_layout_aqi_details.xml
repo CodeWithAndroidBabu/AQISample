@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/bg_bottom_dialog_round"
+        app:behavior_peekHeight="20dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/topView"
+                android:layout_width="80dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:background="@color/grey" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:padding="1dp"
+                android:src="@drawable/ic_close_icon" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCityName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="start"
+                        android:includeFontPadding="false"
+                        android:text="Hongkong"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llAqiBg"
+                            android:layout_width="140dp"
+                            android:layout_height="75dp"
+                            android:background="@drawable/bg_aqi_good"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/ivAQILevelIcon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:src="@drawable/icon_aqi_good" />
+
+
+                            <TextView
+                                android:id="@+id/tvAQINo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="100"
+                                android:textColor="@color/white"
+                                android:textSize="34sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvAQIName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:letterSpacing=".02"
+                                android:text="Good"
+                                android:textColor="@color/black"
+                                android:textSize="40sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAqiDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAQISubName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:includeFontPadding="false"
+                            android:text="PORT LOUIS GOVT SCHOOL"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Air Quality Levels:"
+                                android:textColor="@color/purple_700"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvAQILevelName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/aqi_good"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvAQICauseName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="(due to PM10)"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Date:"
+                                android:textColor="@color/purple_700"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/tvAQIDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="05 Oct 2022 10:00 UTC+4"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Country: "
+                                android:textColor="@color/purple_700"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/tvAQICountry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Mauritius"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Location: "
+                                android:textColor="@color/purple_700"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/tvAQILocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Port Louls"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Classification: "
+                                android:textColor="@color/purple_700"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/tvAQIClassificationName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Residential"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Area: "
+                                android:textColor="@color/purple_700"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/tvAQIAreaName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:includeFontPadding="false"
+                                android:text="Rural"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llInfoAQLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:includeFontPadding="false"
+                            android:text="Air Quality Levels"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="8dp"
+                            android:padding="3dp"
+                            android:src="@drawable/ic_info_icon" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/viewHolderLayout"
+                        layout="@layout/view_holder_aqi_level_details" />
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

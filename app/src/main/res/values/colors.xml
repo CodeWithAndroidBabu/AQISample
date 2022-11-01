@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#614385</color>
+    <color name="purple_500">#516395</color>
+    <color name="purple_700">#0288D1</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#E4E4E4</color>
+
+    //AQI Colors
+    <color name="aqi_good">#a0f161</color>
+    <color name="aqi_moderate">#ffec4d</color>
+    <color name="aqi_moderate_unhealthy">#fcb24c</color>
+    <color name="aqi_unhealthy">#fe6273</color>
+    <color name="aqi_very_unhealthy">#b36ebe</color>
+    <color name="aqi_hazardous">#935374</color>
+</resources>

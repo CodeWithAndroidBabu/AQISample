@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.map.HomeMapsActivity">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@color/black">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardMaxElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_search_icon" />
+
+                        <EditText
+                            android:id="@+id/edSearch"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:fontFamily="@font/roboto_regular"
+                            android:hint="Search city for AQI"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="16dp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <FrameLayout
+                            android:id="@+id/flCancelRequest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="invisible"
+                            android:layout_marginEnd="6dp">
+
+                            <ProgressBar
+                                android:id="@+id/pb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:padding="2dp"
+                                android:src="@drawable/ic_cancel_icon"/>
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerAQICity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear"
+                        android:layoutAnimation="@anim/layout_animation"
+                        android:visibility="visible"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="10"
+                        tools:listitem="@layout/view_holder_aqi_list_layout" />
+
+                    <TextView
+                        android:id="@+id/tvNoItemFound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:text="No Search Item Found!"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+       <!-- <include
+            android:id="@+id/bottomLayout"
+            layout="@layout/bottom_layout_aqi_details"/>-->
+    </RelativeLayout>
+</layout>
